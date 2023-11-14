@@ -10,37 +10,21 @@
 // - [x]  Verifique se a soma dos dois números é par ~~(ou ímpar)~~;
 // - [x]  Verifique se os dois números inseridos são iguais ~~(ou diferentes)~~.
 
-const number1 = Number(prompt("Digite o primeiro número: "));
-const number2 = Number(prompt("Digite o segundo número: "));
+let number1 = Number(prompt("Digite o primeiro número: "));
+let number2 = Number(prompt("Digite o segundo número: "));
 
 const sum = number1 + number2;
 const sub = number1 - number2;
 const mult = number1 * number2;
 const div = number1 / number2;
 const restDiv = number1 % number2;
-const isPar = sum % 2 == 0;
+let parOuImpar = sum % 2 == 0 ? "PAR!" : "ÍMPAR!";
+let checkEquals = number1 == number2 ? "são IGUAIS!" : "são DIFERENTES!";
 
-alert(sum);
-alert(sub);
-alert(mult);
-alert(div);
-alert(restDiv);
-
-function checkIsPar(sum) {
-  if (isPar) {
-    return `O resultado da soma entre ${number1} e ${number2} é ${sum} e é PAR!`;
-  } else {
-    return `O resultado da soma entre ${number1} e ${number2} é ${sum} e é ÍMPAR!`;
-  }
-}
-
-function checkIsSameNumber(number1, number2) {
-  if (number1 == number2) {
-    return `O ${number1} e o ${number2} são IGUAIS!`;
-  } else {
-    return `O número ${number1} e o número ${number2} são DIFERENTES!`;
-  }
-}
-
-alert(checkIsPar(sum));
-alert(checkIsSameNumber(number1, number2));
+alert(`Os dois números inseridos: ${checkEquals}`);
+alert(`A soma dos dois números é: ${sum}`);
+alert(`A soma dos dois números é: ${parOuImpar}`);
+alert(`A subtração dos dois números é: ${sub}`);
+alert(`A multiplicação dos dois números é: ${mult}`);
+alert(`A divisão dos dois números é: ${div}`);
+alert(`O resto da divisão dos dois números é: ${restDiv}`);
